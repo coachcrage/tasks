@@ -54,7 +54,7 @@
 
     // Let user press Enter in the input to add a task
     const taskInputField = document.getElementById('taskInput');
-    taskInputField.addEventListener('keypress', function(event) {
+    taskInputField.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
         addTask();
       }
