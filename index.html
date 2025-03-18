@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +51,14 @@
       const selectedTask = tasks[randomIndex].childNodes[0].nodeValue.trim();
       display.textContent = `Selected Task: ${selectedTask}`;
     }
+
+    // Let user press Enter in the input to add a task
+    const taskInputField = document.getElementById('taskInput');
+    taskInputField.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        addTask();
+      }
+    });
   </script>
 </body>
 </html>
